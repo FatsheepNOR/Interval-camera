@@ -20,7 +20,7 @@ public class WebCamPhotoCamera : MonoBehaviour
 	{
 		Directory.CreateDirectory (ScreenShotDir());
 		webCamTexture = new WebCamTexture();
-		Image.defaultGraphicMaterial.mainTexture = webCamTexture;
+		gameObject.GetComponent<Image>().material.mainTexture = webCamTexture;
 		webCamTexture.Play();
 	}
 
